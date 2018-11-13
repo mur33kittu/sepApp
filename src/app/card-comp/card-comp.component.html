@@ -1,0 +1,22 @@
+<ng-container [ngSwitch]="mode">
+  <ng-container *ngSwitchCase="'cardWithTitle'">
+    <div class="card card-block">
+      <div class="card-body">
+        <h5 class="card-title">{{header}}</h5>
+      </div>
+      <div class="card-body">
+        <ng-content select="card-body"></ng-content>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'cardWithHeader'">
+    <div class="card card-block">
+      <div class="card-header">
+        <ng-content select="card-header"></ng-content>
+      </div>
+      <div class="card-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

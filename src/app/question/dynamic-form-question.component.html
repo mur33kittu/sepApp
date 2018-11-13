@@ -1,0 +1,35 @@
+<div [formGroup]="form">
+  <ng-container [ngSwitch]="question.controlType">
+    <ng-template [ngSwitchCase]="'textbox'">
+      <input class="input-group-text" *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key"
+        [type]="question.type">
+    </ng-template>
+    <ng-template [ngSwitchCase]="'dropdown'">
+      <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+        <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+      </select>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'radio'">
+      <label *ngFor="let option of question.options">
+        <input type="question.key" [id]="option.label" [formControlName]="question.key" [name]="question.key" [value]="option.value"
+          [type]="question.controlType"> {{option.label}}
+      </label>
+    </ng-template>
+  </ng-container>
+  <!-- <label [attr.for]="question.key">{{question.label}}</label> -->
+  <!-- <div [ngSwitch]="question.controlType">
+    <input class="input-group-text" *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key"
+      [type]="question.type">
+
+    <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+    <div *ngSwitchCase="'radio'">
+      <label *ngFor="let option of question.options">
+        <input type="question.key" [id]="option.label" [formControlName]="question.key" [name]="question.key" [value]="option.value"
+          [type]="question.controlType"> {{option.label}}
+      </label>
+    </div>
+  </div> -->
+  <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+</div>

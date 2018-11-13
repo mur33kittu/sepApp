@@ -1,0 +1,26 @@
+<app-card-comp header="Header from App" mode="cardWithTitle">
+  <card-body>
+    <app-dynamic-form [questions]="questions"></app-dynamic-form>
+  </card-body>
+</app-card-comp>
+<app-card-comp header="Header from App" mode="cardWithTitle">
+  <card-body>
+    <app-dynamic-form [questions]="questions1"></app-dynamic-form>
+  </card-body>
+</app-card-comp>
+<app-card-comp header="Header from Question2" mode="cardWithTitle">
+  <card-body>
+    <app-dynamic-form [questions]="questions2"></app-dynamic-form>
+  </card-body>
+</app-card-comp>
+<!-- <ng-container
+  *ngIf="template; then ifTemplate; else otherTemplate">
+</ng-container>
+
+<ng-template #ifTemplate>
+  <span>Hello inside template</span>
+</ng-template>
+<ng-template #otherTemplate>
+  Other template
+</ng-template>
+<button (click)="toggle()">Click to Toggle</button> -->
