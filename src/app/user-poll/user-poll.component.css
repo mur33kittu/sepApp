@@ -1,0 +1,47 @@
+.container {
+  background: #9c88ff;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0px #8c7ae6;
+}
+
+label {
+  margin: 10px;
+  font-family: 'Satisfy', cursive;
+  color: #fff;
+  font-size: 28px;
+}
+
+.email {
+  display: block;
+  width: 292px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 4px;
+  text-align: center;
+  margin: 5px;
+  font-family: 'Satisfy', cursive
+}
+
+.button {
+  width: 300px;
+  height: 38px;
+  background: #4cd137;
+  font-size: 18px;
+  border: 0px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 5px;
+  font-family: 'Satisfy', cursive;
+}
+
+.error {
+  color: #fff;
+}

@@ -1,0 +1,15 @@
+<form [formGroup]="newsletterForm" (submit)="onSubmit()">
+  <div class="container">
+    <label>{{title}}</label>
+    <input class="email" formControlName="email" id="email" type="email" placeholder="Your email" />
+    <div *ngIf="(email.dirty || email.touched) && email.invalid">
+      <span *ngIf="email.errors.required">
+        <i class="error">email address is required.</i>
+      </span>
+      <span *ngIf="email.errors.email">
+        <i class="error">not a valid email addreess.</i>
+      </span>
+    </div>
+    <button class="button" type="submit">Subscribe!</button>
+  </div>
+</form>
